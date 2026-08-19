@@ -1,0 +1,26 @@
+# Generated CMake artifacts.
+/build*/
+/cmake-build-*/
+
+# Generated runtime and experiment logs.
+/results/
+
+# Python bytecode and local editor state.
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Generated pi0.5 environments, downloads, data, weights, and runs.
+/learning/openpi/
+/learning/cache/
+/learning/datasets/raw/
+/learning/datasets/lerobot/
+/learning/checkpoints/
+/learning/runs/
+
+# Legacy local camera captures.
+/vision_data/datasets/
+
+# Local credentials and machine-specific overrides.
+.env
+*.local

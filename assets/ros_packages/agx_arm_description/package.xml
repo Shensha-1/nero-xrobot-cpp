@@ -1,0 +1,7 @@
+<package format="3">
+  <name>agx_arm_description</name>
+  <version>0.0.0</version>
+  <description>Local ROS package wrapper for AgileX arm URDF assets.</description>
+  <maintainer email="local@example.com">local</maintainer>
+  <license>MIT</license>
+</package>

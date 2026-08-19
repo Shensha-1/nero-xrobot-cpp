@@ -1,0 +1,27 @@
+schema_version: 1
+robot: nero_7dof
+control_owner: xrobot_cpp
+policy: pi05
+observation:
+  images:
+    right_wrist:
+      device: /dev/video0
+      encoding: rgb
+    external:
+      device: /dev/video2
+      encoding: rgb
+  state:
+    names: [j1_rad, j2_rad, j3_rad, j4_rad, j5_rad, j6_rad, j7_rad, gripper_width_m]
+action_source:
+  semantics: next_target_increment
+  names: [dj1_rad, dj2_rad, dj3_rad, dj4_rad, dj5_rad, dj6_rad, dj7_rad, dgripper_target_m]
+policy_adapter:
+  status: not_implemented
+  requirement: map NERO observations and actions through an OpenPI transform; validate offline before deployment
+execution:
+  owner: xrobot_cpp
+  constraints: [joint_limits, velocity, acceleration, jerk, mit_gravity_impedance, feedback_interlock]
+capture:
+  require_continuous_mit_telemetry: true
+  reject_on_safety_hold: true
+  require_operator_outcome: true

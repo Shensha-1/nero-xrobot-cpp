@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "mapping": {
+    "translation_scale": 0.7,
+    "rotation_scale": 1.0,
+    "position_deadband_m": 0.012,
+    "rotation_deadband_rad": 0.05,
+    "base_from_view_rotation": [
+      [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "controller_to_tcp_rotation": [
+      [
+        0.028003510959,
+        0.997386234979,
+        0.06660706906
+      ],
+      [
+        0.990075214389,
+        -0.036855159297,
+        0.13561993617
+      ],
+      [
+        0.137720271665,
+        0.06214817381,
+        -0.988519464282
+      ]
+    ],
+    "absolute_orientation_calibrated": true,
+    "one_euro_min_cutoff_hz": 2.0,
+    "one_euro_beta": 0.25,
+    "one_euro_derivative_cutoff_hz": 1.0
+  },
+  "safety": {
+    "ik_position_tolerance_m": 0.015,
+    "ik_orientation_tolerance_rad": 0.04,
+    "workspace_enabled": false,
+    "workspace_min_xyz_m": [
+      -1.0,
+      -1.0,
+      -0.2
+    ],
+    "workspace_max_xyz_m": [
+      1.0,
+      1.0,
+      1.5
+    ],
+    "joint_soft_limit_margin_rad": 0.0
+  }
+}

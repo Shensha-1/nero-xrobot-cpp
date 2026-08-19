@@ -1,0 +1,59 @@
+[build-system]
+build-backend = "cmeel"
+requires = [
+  "cmeel[build]",
+  "eiquadprog >= 1.2.6, < 2",
+  "pin[build]==3.8.0",
+  "rhoban-cmeel-jsoncpp",
+  "doxystub >= 0.1.7",
+  "cmeel-urdfdom==4.0.1",
+  "cmeel-tinyxml2==10.0.0",
+  "cmake<4"
+]
+
+[project]
+authors = [{ email = "team@rhoban.com", name = "Rhoban team" }]
+classifiers = []
+dependencies = [
+  "eiquadprog >= 1.2.6, < 2",
+  "pin==3.8.0",
+  "rhoban-cmeel-jsoncpp",
+  "cmeel-urdfdom==4.0.1",
+  "cmeel-tinyxml2==10.0.0",
+  "meshcat",
+  "ischedule"
+]
+description = "PlaCo: Rhoban Planning and Control"
+license = "MIT"
+name = "placo"
+requires-python = ">= 3.10"
+version = "0.9.23"
+
+[project.urls]
+changelog = "https://github.com/rhoban/placo/blob/main/CHANGELOG.md"
+homepage = "https://placo.readthedocs.io/en/latest/"
+repository = "https://github.com/rhoban/placo.git"
+
+[tool.isort]
+profile = "black"
+
+[tool.ruff]
+target-version = "py39"
+
+[tool.tomlsort]
+all = true
+
+[tool.cmeel]
+run-tests = false
+
+
+[tool.cibuildwheel.macos]
+before-all = "brew install --formula doxygen"
+
+[tool.cibuildwheel.linux]
+before-all = "yum install -y doxygen"
+
+[[tool.cibuildwheel.overrides]]
+select = "*-musllinux*"
+before-all = "apk add doxygen"
+

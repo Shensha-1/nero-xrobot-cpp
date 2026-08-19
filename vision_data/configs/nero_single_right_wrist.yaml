@@ -1,0 +1,14 @@
+camera:
+  stream: right_wrist
+  device: /dev/video0
+  serial: DCX-250107-ZW_DECXIN
+  width: 640
+  height: 480
+  pixel_format: MJPG
+
+dataset:
+  root: vision_data/datasets
+  image_streams:
+    - right_wrist
+  state: [joint_1_rad, joint_2_rad, joint_3_rad, joint_4_rad, joint_5_rad, joint_6_rad, joint_7_rad, gripper_width_m]
+  action: [joint_1_target_rad, joint_2_target_rad, joint_3_target_rad, joint_4_target_rad, joint_5_target_rad, joint_6_target_rad, joint_7_target_rad, gripper_target_m]

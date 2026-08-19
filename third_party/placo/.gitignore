@@ -1,0 +1,7 @@
+**.pyc
+**/__pycache__
+html/
+xml/
+latex/
+placo.pyi
+dist/
